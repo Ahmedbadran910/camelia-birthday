@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#fff0f5" />
+  <title>Camelia's First Birthday | عيد ميلاد كاميليا الأول</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="sparkles" aria-hidden="true">✦　✧　♡　✦　✧　♡</div>
+  <main class="card">
+    <div class="top-cloud cloud-one"></div><div class="top-cloud cloud-two"></div>
+
+    <section class="screen active" id="screen1">
+      <div class="eyebrow">A LITTLE CELEBRATION ✨</div>
+      <div class="gift" aria-hidden="true"><div class="gift-lid"></div><div class="gift-box">♡</div><div class="gift-ribbon"></div></div>
+      <h1 class="hero-title">You're Invited!</h1>
+      <p class="arabic">إنتوا معزومين لأحلى عيد ميلاد!</p>
+      <p class="muted">A tiny celebration for a very big milestone.</p>
+      <button class="primary" onclick="goTo(2)">Open your invitation <span>♡</span></button>
+      <button class="language" onclick="toggleLanguage()" id="langBtn">العربية</button>
+    </section>
+
+    <section class="screen" id="screen2">
+      <div class="confetti" aria-hidden="true">🎈　⭐　🧸　🎀</div>
+      <div class="photo-frame">
+        <div class="photo-placeholder" id="photoPlaceholder">
+          <span>📷</span><small>Add Camelia's photo<br>to <b>images/camelia.jpg</b></small>
+        </div>
+        <img id="babyPhoto" src="images/camelia.jpg" alt="Camelia" onload="this.style.display='block'; document.getElementById('photoPlaceholder').style.display='none';" onerror="this.style.display='none';" />
+      </div>
+      <p class="eyebrow">OUR LITTLE SUNSHINE</p>
+      <h1 class="name">Camelia <span>♡</span></h1>
+      <h2 class="one">IS TURNING ONE!</h2>
+      <p class="arabic large">أميرتنا كاميليا بتكمل سنتها الأولى 🎂</p>
+      <p class="muted">One year of giggles, cuddles & endless love.</p>
+      <button class="primary" onclick="goTo(3)">See the party details <span>→</span></button>
+      <button class="back" onclick="goTo(1)">Back</button>
+    </section>
+
+    <section class="screen" id="screen3">
+      <div class="illustration">🎂</div>
+      <p class="eyebrow">LET'S CELEBRATE TOGETHER</p>
+      <h1 class="section-title">The Birthday Party</h1>
+      <h2 class="arabic">يلا نحتفل سوا!</h2>
+      <div class="details">
+        <div class="detail"><span>📅</span><div><b>Date / التاريخ</b><p id="dateText">Date to be announced</p></div></div>
+        <div class="detail"><span>⏰</span><div><b>Time / المعاد</b><p id="timeText">Time to be announced</p></div></div>
+        <div class="detail"><span>📍</span><div><b>Location / المكان</b><p id="venueText">Venue details coming soon</p></div></div>
+      </div>
+      <div class="countdown-wrap">
+        <p class="countdown-label">COUNTING DOWN TO THE FUN</p>
+        <div class="countdown" id="countdown">
+          <div><b>--</b><small>Days</small></div><div><b>--</b><small>Hours</small></div><div><b>--</b><small>Minutes</small></div><div><b>--</b><small>Seconds</small></div>
+        </div>
+      </div>
+      <button class="primary" onclick="goTo(4)">Where's the party? <span>→</span></button>
+      <button class="back" onclick="goTo(2)">Back</button>
+    </section>
+
+    <section class="screen" id="screen4">
+      <div class="illustration">🧸</div>
+      <p class="eyebrow">WE CAN'T WAIT TO SEE YOU</p>
+      <h1 class="section-title">Come celebrate!</h1>
+      <h2 class="arabic">مستنيينكم تنورونا ❤️</h2>
+      <p class="muted" id="addressText">We'll share the party location here.</p>
+      <a class="primary map-button" id="mapLink" href="#" target="_blank" rel="noopener">Open Google Maps <span>↗</span></a>
+      <div class="rsvp-box">
+        <div class="rsvp-icon">💌</div>
+        <h3>Will you join us?</h3>
+        <p class="arabic">أكدولنا حضوركم عشان نفرح بيكم</p>
+        <a class="primary whatsapp" id="rsvpLink" href="#" target="_blank" rel="noopener">RSVP on WhatsApp</a>
+      </div>
+      <p class="closing">With love, <b>Camelia & Family</b> ♡</p>
+      <button class="back" onclick="goTo(3)">Back</button>
+    </section>
+  </main>
+  <footer>Made with ♡ for a little bundle of joy</footer>
+  <script src="script.js"></script>
+</body>
+</html>
